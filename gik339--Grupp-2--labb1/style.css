@@ -1,0 +1,138 @@
+body{
+  width: 70%;
+  margin-block-start: 8%;
+  margin-inline: auto;
+}
+.window{
+    display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2rem;
+    background:radial-gradient(circle at center, #ffffff, #c0c0c0);
+    animation: gradient 15s ease infinite;
+    border-radius: 1rem;
+    border: .1rem grey solid;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    
+}
+
+.checkbox{
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+
+.div--color{
+  background-color: none;
+}
+
+#div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 2rem;
+  border-radius: 1rem;
+  
+  
+}
+.textfield{
+  border: .1rem grey solid;
+  width: 50%;
+}
+
+#color{
+    margin-block-start: 1rem;
+    background-color: #fff;
+    color: #000;
+    border: .5px grey solid;
+    border-radius: 5px;  
+    width: max-content;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#content{
+    margin-block-start: 1rem;
+    background-color: #fff;
+    color: #000;
+    border: .5px grey solid;
+    border-radius: 5px; 
+    width: max-content;
+    margin-right:1.5rem ;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+#btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  font-size: 10px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background: #c38b8b;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  margin-block-end: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  
+
+}
+#btn::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(
+      124deg,
+      #ff2400,
+      #e81d1d,
+      #e8b71d,
+      #e3e81d,
+      #1de840,
+      #1ddde8,
+      #2b1de8,
+      #dd00f3,
+      #dd00f3
+    );
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    animation: move 10s linear infinite;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  #btn:hover::before {
+    opacity: 1;
+  }
+  #btn::after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient( to bottom, #bcc6cc, black, #bcc6cc) ;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
