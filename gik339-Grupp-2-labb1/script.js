@@ -24,7 +24,9 @@ for (let i = 0; i < myTextfield.length; i++) {
     myTextfield[i].addEventListener('input', function() {
     var input = myTextfield[1].value;
     myDiv.innerHTML=input;
+    console.log(myTextfield[i]);
     });
+    
 }
 
 
